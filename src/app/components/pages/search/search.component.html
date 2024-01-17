@@ -1,0 +1,12 @@
+<div class="search">
+  <form class="search-form">
+    <input
+      #s
+      type="text"
+      placeholder="Search foods here"
+      (keyup.enter)="search(s.value)"
+      [value]="searchTerm"
+    />
+    <input (click)="search(s.value)" type="submit" value="Submit" />
+  </form>
+</div>

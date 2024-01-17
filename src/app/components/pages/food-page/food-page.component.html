@@ -1,0 +1,18 @@
+<ul class="container">
+  <img [src]="food.imageUrl" [alt]="food.name" />
+  <li class="details">
+    <div class="header">
+      <span class="name">
+        {{ food.name }}
+      </span>
+      <span class="favourite {{ food.favourite ? '' : 'not' }}"> </span>
+    </div>
+    <div class="origins">
+      <span *ngFor="let origin of food.origins">
+        {{ origin }}
+      </span>
+    </div>
+    <div class="price">{{ food.price }} $</div>
+    <button (click)="addToCart()">Add to cart</button>
+  </li>
+</ul>

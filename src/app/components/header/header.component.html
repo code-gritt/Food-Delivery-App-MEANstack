@@ -1,0 +1,44 @@
+<header>
+  <div class="container">
+    <div>
+      <a
+        style="position: relative; bottom: 20px; pointer-events: none"
+        routerLink="/"
+        class="logo"
+        >Food Store
+      </a>
+      <img
+        class="logoImage"
+        src="https://static.vecteezy.com/system/resources/thumbnails/008/480/737/small/burger-icon-simple-colored-burger-icon-fast-food-logo-free-png.png"
+        alt="foodlogo"
+      />
+    </div>
+
+    <div class="darkmodeBtn">
+      <mat-icon (click)="toggleTheme()">{{
+        isDarkMode ? "wb_sunny" : "nights_stay"
+      }}</mat-icon>
+    </div>
+
+    <nav>
+      <ul>
+        <li>
+          <a style="text-decoration: none" href=""> Login </a>
+        </li>
+        <li class="menu-container">
+          <a routerLink="/dashboard" class="logo">Gokul</a>
+          <div class="menu">
+            <a routerLink="/profile" class="logo">Profile</a>
+            <a routerLink="/order" class="logo">Order</a>
+            <a routerLink="/login" class="logo">Logout</a>
+          </div>
+        </li>
+        <li>
+          <a routerLink="/cart-page"
+            >Cart <span *ngIf="cartQuantity">{{ cartQuantity }}</span></a
+          >
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
